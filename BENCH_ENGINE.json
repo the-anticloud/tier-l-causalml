@@ -1,0 +1,538 @@
+{
+  "schema": "anticloud.tier-bench/1",
+  "project": "L_CAUSALML",
+  "source": {
+    "repo_path": "UPSTREAM_CLONE",
+    "git": {
+      "head": "49283de921ba66379bab71305d471de6ce893d34",
+      "url": "https://github.com/uber/causalml.git",
+      "branch": "master",
+      "committed_at": "2026-10-05T06:33:51-07:00"
+    }
+  },
+  "metrics": {
+    "files_total": 240,
+    "source_files_scanned": 103,
+    "lines_of_code": 33784,
+    "languages": {
+      ".py": 106,
+      ".ipynb": 28,
+      ".png": 27,
+      ".rst": 22,
+      ".md": 11,
+      ".pyx": 11,
+      ".csv": 10,
+      ".pxd": 9,
+      "(none)": 4,
+      ".yml": 2,
+      ".yaml": 1,
+      ".in": 1,
+      ".toml": 1,
+      ".cfg": 1,
+      ".ini": 1
+    }
+  },
+  "licence": {
+    "spdx": "UNKNOWN",
+    "class": "C",
+    "source_file": "LICENSE",
+    "redistribution_allowed": false
+  },
+  "dependencies": {
+    "count": 18,
+    "unique": 18,
+    "by_ecosystem": {
+      "pypi": 18
+    },
+    "list": [
+      {
+        "ecosystem": "pypi",
+        "name": "forestci",
+        "version": "==0.6",
+        "source_file": "pyproject.toml",
+        "raw": "forestci==0.6"
+      },
+      {
+        "ecosystem": "pypi",
+        "name": "pathos",
+        "version": "==0.2.9",
+        "source_file": "pyproject.toml",
+        "raw": "pathos==0.2.9"
+      },
+      {
+        "ecosystem": "pypi",
+        "name": "numpy",
+        "version": ">=1.25.2",
+        "source_file": "pyproject.toml",
+        "raw": "numpy>=1.25.2"
+      },
+      {
+        "ecosystem": "pypi",
+        "name": "scipy",
+        "version": ">=1.16.0",
+        "source_file": "pyproject.toml",
+        "raw": "scipy>=1.16.0"
+      },
+      {
+        "ecosystem": "pypi",
+        "name": "matplotlib",
+        "version": "",
+        "source_file": "pyproject.toml",
+        "raw": "matplotlib"
+      },
+      {
+        "ecosystem": "pypi",
+        "name": "pandas",
+        "version": ">=0.24.1",
+        "source_file": "pyproject.toml",
+        "raw": "pandas>=0.24.1"
+      },
+      {
+        "ecosystem": "pypi",
+        "name": "scikit-learn",
+        "version": ">=1.6.0",
+        "source_file": "pyproject.toml",
+        "raw": "scikit-learn>=1.6.0"
+      },
+      {
+        "ecosystem": "pypi",
+        "name": "statsmodels",
+        "version": ">=0.14.5",
+        "source_file": "pyproject.toml",
+        "raw": "statsmodels>=0.14.5"
+      },
+      {
+        "ecosystem": "pypi",
+        "name": "seaborn",
+        "version": "",
+        "source_file": "pyproject.toml",
+        "raw": "seaborn"
+      },
+      {
+        "ecosystem": "pypi",
+        "name": "xgboost",
+        "version": "",
+        "source_file": "pyproject.toml",
+        "raw": "xgboost"
+      },
+      {
+        "ecosystem": "pypi",
+        "name": "pydot",
+        "version": ">=3.0.0",
+        "source_file": "pyproject.toml",
+        "raw": "pydot>=3.0.0"
+      },
+      {
+        "ecosystem": "pypi",
+        "name": "tqdm",
+        "version": "",
+        "source_file": "pyproject.toml",
+        "raw": "tqdm"
+      },
+      {
+        "ecosystem": "pypi",
+        "name": "shap",
+        "version": "",
+        "source_file": "pyproject.toml",
+        "raw": "shap"
+      },
+      {
+        "ecosystem": "pypi",
+        "name": "dill",
+        "version": "",
+        "source_file": "pyproject.toml",
+        "raw": "dill"
+      },
+      {
+        "ecosystem": "pypi",
+        "name": "lightgbm",
+        "version": "",
+        "source_file": "pyproject.toml",
+        "raw": "lightgbm"
+      },
+      {
+        "ecosystem": "pypi",
+        "name": "packaging",
+        "version": "",
+        "source_file": "pyproject.toml",
+        "raw": "packaging"
+      },
+      {
+        "ecosystem": "pypi",
+        "name": "graphviz",
+        "version": "",
+        "source_file": "pyproject.toml",
+        "raw": "graphviz"
+      },
+      {
+        "ecosystem": "pypi",
+        "name": "black",
+        "version": ">=26.1.0",
+        "source_file": "pyproject.toml",
+        "raw": "black>=26.1.0"
+      }
+    ]
+  },
+  "owasp_top10": {
+    "total_findings": 13,
+    "files_with_findings": 12,
+    "severity": {
+      "high": 0,
+      "medium": 5,
+      "low": 8
+    },
+    "categories": {
+      "A01-BrokenAccessControl": {
+        "count": 0,
+        "findings": []
+      },
+      "A02-CryptographicFailures": {
+        "count": 0,
+        "findings": []
+      },
+      "A03-Injection": {
+        "count": 0,
+        "findings": []
+      },
+      "A04-InsecureDesign": {
+        "count": 6,
+        "findings": [
+          {
+            "severity": "low",
+            "file": "tests/test_utils.py",
+            "line": 33,
+            "cwe": "CWE-",
+            "snippet": "anything that introspects the method \u2014 ``help()``, Sphinx autodoc, and"
+          },
+          {
+            "severity": "low",
+            "file": "docs/conf.py",
+            "line": 20,
+            "cwe": "CWE-",
+            "snippet": "# If extensions (or modules to document with autodoc) are in another"
+          },
+          {
+            "severity": "low",
+            "file": "causalml/match.py",
+            "line": 202,
+            "cwe": "CWE-",
+            "snippet": "# XXX: Should we deduplicate the indices of the control group too?"
+          },
+          {
+            "severity": "low",
+            "file": "causalml/inference/tree/_tree/_classes.py",
+            "line": 440,
+            "cwe": "CWE-",
+            "snippet": "# TODO: tree shouldn't need this in this case"
+          },
+          {
+            "severity": "low",
+            "file": "causalml/inference/meta/explainer.py",
+            "line": 197,
+            "cwe": "CWE-",
+            "snippet": "None  # hacky way of running shap without error"
+          },
+          {
+            "severity": "low",
+            "file": "causalml/feature_selection/filters.py",
+            "line": 506,
+            "cwe": "CWE-",
+            "snippet": "# [TODO] Application to categorical features"
+          }
+        ]
+      },
+      "A05-SecurityMisconfiguration": {
+        "count": 5,
+        "findings": [
+          {
+            "severity": "medium",
+            "file": "causalml/inference/tree/plot.py",
+            "line": 366,
+            "cwe": "CWE-1188",
+            "snippet": "impurity: bool, default=True"
+          },
+          {
+            "severity": "medium",
+            "file": "causalml/inference/tree/_tree/_classes.py",
+            "line": 514,
+            "cwe": "CWE-1188",
+            "snippet": "check_input : bool, default=True"
+          },
+          {
+            "severity": "medium",
+            "file": "causalml/inference/tree/causal/causalforest.py",
+            "line": 226,
+            "cwe": "CWE-1188",
+            "snippet": "bootstrap : (bool, default=True)"
+          },
+          {
+            "severity": "medium",
+            "file": "causalml/inference/tree/causal/causaltree.py",
+            "line": 186,
+            "cwe": "CWE-1188",
+            "snippet": "honesty: (bool, default=True), use the honest approach of"
+          },
+          {
+            "severity": "medium",
+            "file": "causalml/dataset/classification.py",
+            "line": 227,
+            "cwe": "CWE-1188",
+            "snippet": "random_select_association : boolean, optional (default = True)"
+          }
+        ]
+      },
+      "A06-VulnerableComponents": {
+        "count": 0,
+        "findings": []
+      },
+      "A07-AuthFailures": {
+        "count": 0,
+        "findings": []
+      },
+      "A08-SoftwareDataIntegrity": {
+        "count": 2,
+        "findings": [
+          {
+            "severity": "low",
+            "file": "causalml/inference/torch/cevae.py",
+            "line": 21,
+            "cwe": "CWE-319",
+            "snippet": "| http://papers.nips.cc/paper/7223-causal-effect-inference-with-deep-latent-variable-models.pdf"
+          },
+          {
+            "severity": "low",
+            "file": "causalml/inference/jax/cevae/modeling.py",
+            "line": 10,
+            "cwe": "CWE-319",
+            "snippet": "http://papers.nips.cc/paper/7223-causal-effect-inference-with-deep-latent-variable-models.pdf"
+          }
+        ]
+      },
+      "A09-LoggingMonitoringFailures": {
+        "count": 0,
+        "findings": []
+      },
+      "A10-SSRF": {
+        "count": 0,
+        "findings": []
+      }
+    }
+  },
+  "owasp_llm_top10": {
+    "total_findings": 0,
+    "files_with_findings": 0,
+    "severity": {
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    },
+    "categories": {
+      "LLM01-PromptInjection": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM02-SensitiveInfoDisclosure": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM03-SupplyChain": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM04-DataPoisoning": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM05-ImproperOutputHandling": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM06-ExcessiveAgency": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM07-SystemPromptLeak": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM08-VectorEmbeddingWeaknesses": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM09-Misinformation": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM10-UnboundedConsumption": {
+        "count": 0,
+        "findings": []
+      }
+    }
+  },
+  "sbom": {
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.5",
+    "serialNumber": "urn:uuid:4d9fd143-47a6-5664-ac75-6cab44eec150",
+    "version": 1,
+    "metadata": {
+      "timestamp": "2026-10-08T08:24:26Z",
+      "component": {
+        "type": "application",
+        "name": "L_CAUSALML",
+        "version": "49283de921ba",
+        "bom-ref": "pkg:generic/anticloud/L_CAUSALML@49283de921ba",
+        "purl": "pkg:generic/anticloud/L_CAUSALML@49283de921ba",
+        "licenses": [
+          {
+            "license": {
+              "id": "UNKNOWN"
+            }
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "anticloud:source-commit",
+          "value": "49283de921ba66379bab71305d471de6ce893d34"
+        },
+        {
+          "name": "anticloud:source-url",
+          "value": "https://github.com/uber/causalml.git"
+        },
+        {
+          "name": "anticloud:tier",
+          "value": "tier-agent"
+        }
+      ]
+    },
+    "components": [
+      {
+        "type": "library",
+        "name": "forestci",
+        "version": "==0.6",
+        "purl": "pkg:pypi/forestci@0.6",
+        "bom-ref": "pypi/forestci@==0.6"
+      },
+      {
+        "type": "library",
+        "name": "pathos",
+        "version": "==0.2.9",
+        "purl": "pkg:pypi/pathos@0.2.9",
+        "bom-ref": "pypi/pathos@==0.2.9"
+      },
+      {
+        "type": "library",
+        "name": "numpy",
+        "version": ">=1.25.2",
+        "purl": "pkg:pypi/numpy@1.25.2",
+        "bom-ref": "pypi/numpy@>=1.25.2"
+      },
+      {
+        "type": "library",
+        "name": "scipy",
+        "version": ">=1.16.0",
+        "purl": "pkg:pypi/scipy@1.16.0",
+        "bom-ref": "pypi/scipy@>=1.16.0"
+      },
+      {
+        "type": "library",
+        "name": "matplotlib",
+        "version": "unspecified",
+        "purl": "pkg:pypi/matplotlib",
+        "bom-ref": "pypi/matplotlib@unspecified"
+      },
+      {
+        "type": "library",
+        "name": "pandas",
+        "version": ">=0.24.1",
+        "purl": "pkg:pypi/pandas@0.24.1",
+        "bom-ref": "pypi/pandas@>=0.24.1"
+      },
+      {
+        "type": "library",
+        "name": "scikit-learn",
+        "version": ">=1.6.0",
+        "purl": "pkg:pypi/scikit-learn@1.6.0",
+        "bom-ref": "pypi/scikit-learn@>=1.6.0"
+      },
+      {
+        "type": "library",
+        "name": "statsmodels",
+        "version": ">=0.14.5",
+        "purl": "pkg:pypi/statsmodels@0.14.5",
+        "bom-ref": "pypi/statsmodels@>=0.14.5"
+      },
+      {
+        "type": "library",
+        "name": "seaborn",
+        "version": "unspecified",
+        "purl": "pkg:pypi/seaborn",
+        "bom-ref": "pypi/seaborn@unspecified"
+      },
+      {
+        "type": "library",
+        "name": "xgboost",
+        "version": "unspecified",
+        "purl": "pkg:pypi/xgboost",
+        "bom-ref": "pypi/xgboost@unspecified"
+      },
+      {
+        "type": "library",
+        "name": "pydot",
+        "version": ">=3.0.0",
+        "purl": "pkg:pypi/pydot@3.0.0",
+        "bom-ref": "pypi/pydot@>=3.0.0"
+      },
+      {
+        "type": "library",
+        "name": "tqdm",
+        "version": "unspecified",
+        "purl": "pkg:pypi/tqdm",
+        "bom-ref": "pypi/tqdm@unspecified"
+      },
+      {
+        "type": "library",
+        "name": "shap",
+        "version": "unspecified",
+        "purl": "pkg:pypi/shap",
+        "bom-ref": "pypi/shap@unspecified"
+      },
+      {
+        "type": "library",
+        "name": "dill",
+        "version": "unspecified",
+        "purl": "pkg:pypi/dill",
+        "bom-ref": "pypi/dill@unspecified"
+      },
+      {
+        "type": "library",
+        "name": "lightgbm",
+        "version": "unspecified",
+        "purl": "pkg:pypi/lightgbm",
+        "bom-ref": "pypi/lightgbm@unspecified"
+      },
+      {
+        "type": "library",
+        "name": "packaging",
+        "version": "unspecified",
+        "purl": "pkg:pypi/packaging",
+        "bom-ref": "pypi/packaging@unspecified"
+      },
+      {
+        "type": "library",
+        "name": "graphviz",
+        "version": "unspecified",
+        "purl": "pkg:pypi/graphviz",
+        "bom-ref": "pypi/graphviz@unspecified"
+      },
+      {
+        "type": "library",
+        "name": "black",
+        "version": ">=26.1.0",
+        "purl": "pkg:pypi/black@26.1.0",
+        "bom-ref": "pypi/black@>=26.1.0"
+      }
+    ]
+  },
+  "elapsed_seconds": 3.28
+}
